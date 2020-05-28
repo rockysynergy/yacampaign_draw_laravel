@@ -1,0 +1,12 @@
+{
+    "name": "orqlog/yacampaigndraw",
+    "description": "Laravel Draw campaign implementation",
+    "type": "library",
+    "require": {
+        "php": ">=7.0.0",
+        "konekt/concord": ">=0.9.10"
+    },
+    "autoload": {
+        "psr-4": { "Orqlog\\YacampaignDraw\\": "src/" }
+    }
+}
