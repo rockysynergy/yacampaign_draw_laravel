@@ -4,8 +4,15 @@
     "type": "library",
     "require": {
         "php": ">=7.0.0",
-        "konekt/concord": ">=0.9.10"
+        "konekt/concord": ">=0.9.10",
+        "orqlog/yacampaign": "dev-master"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://gitee.com/rockysynergy/orq_yacampaign"
+        }
+    ],
     "autoload": {
         "psr-4": { "Orqlog\\YacampaignDraw\\": "src/" }
     }
