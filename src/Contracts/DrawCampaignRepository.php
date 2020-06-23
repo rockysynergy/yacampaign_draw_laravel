@@ -2,4 +2,6 @@
 
 namespace Orqlog\YacampaignDraw\Contracts;
 
-interface DrawCampaignRepository {}
+use Orqlog\Yacampaign\Domain\Repository\CampaignRepositoryInterface;
+
+interface DrawCampaignRepository extends CampaignRepositoryInterface {}
