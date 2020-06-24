@@ -21,4 +21,14 @@ trait DbConfigTrait
             'password' => '123456',
         ]);
     }
+
+    protected function getMigrationPath()
+    {
+       return __DIR__ . '/../../src/resources/database/migrations';
+    }
+
+    protected function getFactoryPath()
+    {
+       return __DIR__ . '/../../src/resources/database/factories';
+    }
 }

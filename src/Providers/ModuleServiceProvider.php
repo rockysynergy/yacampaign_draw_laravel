@@ -3,14 +3,12 @@
 namespace Orqlog\YacampaignDraw\Providers;
 
 use Konekt\Concord\BaseModuleServiceProvider;
-use Orqlog\YacampaignDraw\Contracts\DrawCampaign as DrawCampaignContract;
-use Orqlog\YacampaignDraw\Models\DrawCampaign;
-
+use Orqlog\YacampaignDraw\Models\DrawCampaignRepository;
 
 class ModuleServiceProvider extends BaseModuleServiceProvider
 {
 
     protected $models = [
-        DrawCampaign::class,
+        DrawCampaignRepository::class,
     ];
 }

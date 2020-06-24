@@ -15,8 +15,12 @@ class CreateYaDrawcampaignsTable extends Migration
     {
         Schema::create('ya_drawcampaigns', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title', 500)->default(' ')->comment('Campaign title');
+            $table->string('title', 500)->default(' ')->comment('title');
+            $table->text('description', 20000)->comment('Description');
+            $table->unsignedBigInteger('start_at')->default('0')->comment('start timestamp');
+            $table->unsignedBigInteger('end_at')->default('0')->comment('end timestamp');
 
+            $table->softDeletes();
             $table->timestamps();
         });
     }
