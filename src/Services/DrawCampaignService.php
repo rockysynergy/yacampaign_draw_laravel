@@ -2,7 +2,7 @@
 
 namespace Orqlog\YacampaignDraw\Services;
 
-use Orqlog\YacampaignDraw\Models\DrawCampaignRepository;
+use Orqlog\YacampaignDraw\Contracts\DrawCampaignRepositoryContract;
 
 class DrawCampaignService
 {
@@ -12,7 +12,7 @@ class DrawCampaignService
      */
     public function createCampaign(array $data) :void
     {
-        $drawCampaignRepository = new DrawCampaignRepository();
+        $drawCampaignRepository = app()->make(DrawCampaignRepositoryContract::class);
         $drawCampaign = $drawCampaignRepository->makeCampaign($data);
         $drawCampaignRepository->add($drawCampaign);
     }

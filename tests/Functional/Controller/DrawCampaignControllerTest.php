@@ -2,7 +2,7 @@
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-require_once "DbConfigTrait.php";
+require_once __DIR__ . "/../DbConfigTrait.php";
 
 final class DrawCampaignControllerTest extends \Orchestra\Testbench\TestCase
 {

@@ -4,7 +4,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Orqlog\YacampaignDraw\Domain\Model\DrawCampaign;
 use Orqlog\YacampaignDraw\Models\DrawCampaignRepository;
 
-require_once "DbConfigTrait.php";
+require_once __DIR__ . "/../DbConfigTrait.php";
 
 final class DrawCampaignRepositoryTest extends \Orchestra\Testbench\TestCase
 {
