@@ -41,8 +41,8 @@ final class DrawCampaignControllerTest extends \Orchestra\Testbench\TestCase
     public function create(): void
     {
         $data = [
-            'title' => 'The Title',
-            'description' => 'The description',
+            'title' => 'The Title' . date('Y-m-d'),
+            'description' => 'The descriptiona',
             'start_at' => '2020-02-12 14:23:15',
             'end_at' => '2020-02-12 17:23:15',
         ];
