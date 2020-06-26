@@ -24,3 +24,4 @@ class MyServiceProvider extends ServiceProvider
         $this->app->bind(DrawCampaignRepositoryContract::class, DrawCampaignRepository::class);
     }
 }
+
