@@ -3,7 +3,7 @@
 namespace Orqlog\YacampaignDraw\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Orqlog\YacampaignDraw\Contracts\DrawCampaignRepositoryContract;
+use Orqlog\YacampaignDraw\Contracts\DrawCampaignRepository as DrawCampaignRepositoryContract;
 use Orqlog\YacampaignDraw\Domain\Model\DrawCampaign as DrawCampaignModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Orqlog\Yacampaign\Domain\Model\CampaignInterface;
