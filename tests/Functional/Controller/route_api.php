@@ -1,7 +1,6 @@
 <?php
 
-Route::prefix('v1')->namespace('Admin')->group(function(){
-
+Route::prefix('v1')->namespace('Orqlog\YacampaignDraw\Http\Controllers\Admin')->group(function(){
     // Route::get('drawcampaign/{campaignId}', function ($campaignId) {
     //     return 'Hey you the campaign: ' . $campaignId;
     // });

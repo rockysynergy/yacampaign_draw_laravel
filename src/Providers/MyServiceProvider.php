@@ -16,7 +16,7 @@ class MyServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__ . '/../resources/routes/api.php');
+        $this->loadRoutesFrom(__DIR__ . '/../../tests/Functional/Controller/route_api.php');
     }
 
     public function register()

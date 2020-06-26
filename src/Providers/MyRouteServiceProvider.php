@@ -14,7 +14,7 @@ class MyRouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = '\Orqlog\YacampaignDraw\Http\Controllers';
+    protected $namespace = 'Orqlog\YacampaignDraw\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -26,6 +26,7 @@ class MyRouteServiceProvider extends ServiceProvider
         //
 
         parent::boot();
+        $this->mapApiRoutes();
     }
 
     /**
@@ -65,12 +66,12 @@ class MyRouteServiceProvider extends ServiceProvider
      */
     protected function mapApiRoutes()
     {
-        // Route::prefix('api')
-        //      ->middleware('api')
-        //      ->namespace($this->namespace)
-        //      ->group(__DIR__ . '/../resources/routes/api.php');
         Route::prefix('api')
+             ->middleware('api')
              ->namespace($this->namespace)
              ->group(__DIR__ . '/../resources/routes/api.php');
+        // Route::prefix('api')
+        //      ->namespace($this->namespace)
+        //      ->group(__DIR__ . '/../resources/routes/api.php');
     }
 }
