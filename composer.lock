@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea500ffba91c216483fe4da0fd300ecb",
+    "content-hash": "1be044fff6f79163f92dfc54f0002c6e",
     "packages": [
         {
             "name": "brick/math",
@@ -1091,7 +1091,7 @@
             "source": {
                 "type": "git",
                 "url": "https://gitee.com/rockysynergy/orq_yacampaign",
-                "reference": "f5f33adcd88046768137e3b3abbc46aca89743e4"
+                "reference": "4afb14435c6ec5080884efad92d895bc8965f9b3"
             },
             "require-dev": {
                 "mockery/mockery": "^1.4",
@@ -1113,7 +1113,7 @@
                 }
             ],
             "description": "A basic, extensible campain package",
-            "time": "2020-06-24T02:37:06+00:00"
+            "time": "2020-06-26T02:29:34+00:00"
         },
         {
             "name": "phpoption/phpoption",
