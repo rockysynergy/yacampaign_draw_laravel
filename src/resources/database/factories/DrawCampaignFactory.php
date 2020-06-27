@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use Orqlog\YacampaignDraw\Models\DrawCampaignRepository;
+use Orqlog\YacampaignDrawLaravel\Domain\Repository\DrawCampaignRepository;
 
 $factory->define(DrawCampaignRepository::class, function (Faker $faker) {
     $now = new \DateTime();

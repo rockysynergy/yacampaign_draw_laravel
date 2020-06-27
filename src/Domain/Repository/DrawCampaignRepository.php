@@ -1,13 +1,13 @@
 <?php
 
-namespace Orqlog\YacampaignDraw\Models;
+namespace Orqlog\YacampaignDrawLaravel\Domain\Repository;
 
 use Illuminate\Database\Eloquent\Model;
-use Orqlog\YacampaignDraw\Contracts\DrawCampaignRepository as DrawCampaignRepositoryContract;
-use Orqlog\YacampaignDraw\Domain\Model\DrawCampaign as DrawCampaignModel;
+use Orqlog\YacampaignDrawLaravel\Contracts\DrawCampaignRepositoryContract;
+use Orqlog\YacampaignDrawLaravel\Domain\Model\DrawCampaign as DrawCampaignModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Orqlog\Yacampaign\Domain\Model\CampaignInterface;
-use Orqlog\YacampaignDraw\Domain\Model\DrawCampaignValidator;
+use Orqlog\YacampaignDrawLaravel\Domain\Model\DrawCampaignValidator;
 
 class DrawCampaignRepository extends Model implements DrawCampaignRepositoryContract
 {
@@ -92,7 +92,7 @@ class DrawCampaignRepository extends Model implements DrawCampaignRepositoryCont
     }
 
     /**
-     * Convert from DrawCampaign to data format
+     * Convert from DrawCampaign to this ORM format
      */
     protected function makeItem(DrawCampaignModel $drawCampaign, $item = null) : Object
     {
@@ -104,6 +104,14 @@ class DrawCampaignRepository extends Model implements DrawCampaignRepositoryCont
         $item->description = $drawCampaign->getDescription();
 
         return $item;
+    }
+
+    /**
+     * remove DrawCampaign
+     */
+    public function remove(int $campaignId) :void
+    {
+        $this->where('id', '=', $campaignId)->delete();
     }
 
     function attachPrize(int $campaignId, int $prizeId) :void

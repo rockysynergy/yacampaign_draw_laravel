@@ -1,10 +1,10 @@
 <?php
 
-namespace Orqlog\YacampaignDraw\Providers;
+namespace Orqlog\YacampaignDrawLaravel\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Orqlog\YacampaignDraw\Contracts\DrawCampaignRepository as DrawCampainRepositoryContract;
-use Orqlog\YacampaignDraw\Models\DrawCampaignRepository;
+use Orqlog\YacampaignDrawLaravel\Contracts\DrawCampaignRepositoryContract;
+use Orqlog\YacampaignDrawLaravel\Domain\Repository\DrawCampaignRepository;
 
 class MyServiceProvider extends ServiceProvider
 {
@@ -16,12 +16,12 @@ class MyServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__ . '/../../tests/Functional/Controller/route_api.php');
+        $this->loadRoutesFrom(__DIR__ . '/../resources/routes/api.php');
     }
 
     public function register()
     {
-        $this->app->bind(DrawCampainRepositoryContract::class, DrawCampaignRepository::class);
+        $this->app->bind(DrawCampaignRepositoryContract::class, DrawCampaignRepository::class);
     }
 }
 

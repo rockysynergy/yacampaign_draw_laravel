@@ -1,6 +1,6 @@
 <?php
 
-namespace Orqlog\YacampaignDraw\Domain\Model;
+namespace Orqlog\YacampaignDrawLaravel\Domain\Model;
 
 use Orqlog\Yacampaign\Domain\Model\Impl\AbstractCampaign;
 

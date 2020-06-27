@@ -1,19 +1,12 @@
 <?php
 
-namespace Orqlog\YacampaignDraw\Services;
+namespace Orqlog\YacampaignDrawLaravel\Services;
 
-use Orqlog\YacampaignDraw\Contracts\DrawCampaignRepository;
+use Orqlog\YacampaignDrawLaravel\Contracts\DrawCampaignRepository;
 
 class DrawCampaignService
 {
 
-    /**
-     * Create the campaign
-     */
-    public function createCampaign(array $data) :void
-    {
-        $drawCampaignRepository = app()->make(DrawCampaignRepository::class);
-        $drawCampaign = $drawCampaignRepository->makeCampaign($data);
-        $drawCampaignRepository->add($drawCampaign);
-    }
+
+
 }

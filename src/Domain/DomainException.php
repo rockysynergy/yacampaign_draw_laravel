@@ -1,6 +1,6 @@
 <?php
 
-namespace Orqlog\YacampaignDraw\Domain;
+namespace Orqlog\YacampaignDrawLaravel\Domain;
 
 class DomainException extends \Exception
 {

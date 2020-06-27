@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Orqlog\YacampaignDraw\Domain\Model\DrawCampaign;
-use Orqlog\YacampaignDraw\Models\DrawCampaignRepository;
+use Orqlog\YacampaignDrawLaravel\Domain\Model\DrawCampaign;
+use Orqlog\YacampaignDrawLaravel\Domain\Repository\DrawCampaignRepository;
 
-require_once __DIR__ . "/../DbConfigTrait.php";
+require_once __DIR__ . "/../../DbConfigTrait.php";
 
 final class DrawCampaignRepositoryTest extends \Orchestra\Testbench\TestCase
 {
@@ -18,6 +18,11 @@ final class DrawCampaignRepositoryTest extends \Orchestra\Testbench\TestCase
         parent::setUp();
 
         $this->loadMigrationsFrom(self::getMigrationPath());
+    }
+    
+    protected function getPackageProviders($app)
+    {
+        return ['\Orqlog\YacampaignDrawLaravel\Providers\MyServiceProvider'];
     }
 
     /**
@@ -91,7 +96,7 @@ final class DrawCampaignRepositoryTest extends \Orchestra\Testbench\TestCase
     /**
      * @test
      */
-    public function addWillReturnUpdatedCampaignModel()
+    public function addWillReturnAddedCampaignModel()
     {
         $drawCampaignRepository = new DrawCampaignRepository();
 
@@ -147,6 +152,22 @@ final class DrawCampaignRepositoryTest extends \Orchestra\Testbench\TestCase
 
         $updatedDrawCampaign = $drawCampaignRepository->findById($data['id']);
         $this->assertEquals($data['title'], $updatedDrawCampaign->getTitle());
+    }
+
+    /**
+     * @test
+     */
+    public function removeDrawCampaign()
+    {
+        $this->withFactories(self::getFactoryPath());
+        $drawCampaign = factory(DrawCampaignRepository::class)->create();
+
+        $drawCampaignRepository = new DrawCampaignRepository();
+        $drawCampaignRepository->remove($drawCampaign->id);
+        
+        $inserted = DB::table('ya_drawcampaigns')->find($drawCampaign->id);
+        // var_dump($inserted);
+        $this->assertNotNull($inserted->deleted_at);
     }
 
 }
