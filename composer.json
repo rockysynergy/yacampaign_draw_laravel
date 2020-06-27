@@ -18,5 +18,12 @@
     },
     "require-dev": {
         "orchestra/testbench": "^5.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Orqlog\\Debugbar\\Providers\\DrawCampaignServiceProvider"
+            ]
+        }
     }
 }

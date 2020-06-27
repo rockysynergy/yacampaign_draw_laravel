@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Orqlog\YacampaignDrawLaravel\Contracts\DrawCampaignRepositoryContract;
 use Orqlog\YacampaignDrawLaravel\Domain\Repository\DrawCampaignRepository;
 
-class MyServiceProvider extends ServiceProvider
+class DrawCampaignServiceProvider extends ServiceProvider
 {
 
     /**

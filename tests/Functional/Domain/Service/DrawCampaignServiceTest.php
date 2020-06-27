@@ -22,7 +22,7 @@ final class DrawCampaignServiceTest extends \Orchestra\Testbench\TestCase
 
     protected function getPackageProviders($app)
     {
-        return ['\Orqlog\YacampaignDrawLaravel\Providers\MyServiceProvider'];
+        return ['\Orqlog\YacampaignDrawLaravel\Providers\DrawCampaignServiceProvider'];
     }
 
     /**
